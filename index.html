@@ -3,15 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Urban Tech DC - Automation, Digital Presence, IT Solutions</title>
+  <title>UrbanTechDC - Automation, Digital Presence, IT Solutions</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <style>
+    .flip-card {
+      perspective: 1000px;
+      height: 300px;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    .flip-card-back {
+      transform: rotateY(180deg);
+    }
+  </style>
 </head>
 <body class="bg-gray-100">
   <header class="bg-white shadow">
     <div class="container mx-auto px-6 py-3">
       <div class="flex items-center justify-between">
         <div>
-          <a class="text-gray-800 text-xl font-bold md:text-2xl hover:text-gray-700" href="#">Urban Tech DC</a>
+          <a class="text-gray-800 text-xl font-bold md:text-2xl hover:text-gray-700" href="#">UrbanTechDC</a>
         </div>
         <div class="flex md:hidden">
           <button type="button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="toggle menu">
@@ -30,28 +56,67 @@
 
   <main class="mt-10">
     <div class="text-center">
-      <h1 class="text-3xl md:text-4xl font-bold mb-4">Empowering Businesses through Technology</h1>
-      <p class="text-lg mb-8">Automation, Digital Presence, and IT Solutions</p>
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">Local Tech with a Personal Touch</h1>
+      <p class="text-lg mb-8">For Automation, Digital Presence, and IT Solutions in the DC, Maryland, and Virginia (DMV) region, look to us: UrbanTechDC!</p>
       <a href="#contact" class="bg-blue-500 text-white px-6 py-3 rounded-md shadow">Get Started</a>
     </div>
 
     <div id="services" class="container mx-auto px-6 py-12">
       <h2 class="text-2xl font-bold mb-6">Our Services</h2>
       <div class="grid gap-8 grid-cols-1 md:grid-cols-3">
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-bold mb-4">Automation</h3>
-          <p class="mb-4">Streamline processes, increase efficiency, and reduce costs with our automation solutions.</p>
-          <a href="#contact" class="text-blue-500 font-bold hover:underline">Learn More</a>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-bold mb-4">Automation</h3>
+              <p class="mb-4">Streamline processes, increase efficiency, and reduce costs with our automation solutions.</p>
+              <a href="#contact" class="text-blue-500 font-bold hover:underline">Learn More</a>
+            </div>
+            <div class="flip-card-back bg-blue-500 text-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-bold mb-4">Automation</h3>
+              <p>Our automation services include:</p>
+              <ul class="list-disc pl-4">
+                <li>Process Automation</li>
+                <li>Robotic Process Automation (RPA)</li>
+                <li>Workflow Optimization</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-bold mb-4">Digital Presence</h3>
-          <p class="mb-4">Establish a strong online presence with our web development and digital marketing services.</p>
-          <a href="#contact" class="text-blue-500 font-bold hover:underline">Learn More</a>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-bold mb-4">Digital Presence</h3>
+              <p class="mb-4">Establish a strong online presence with our web development and digital marketing services.</p>
+              <a href="#contact" class="text-blue-500 font-bold hover:underline">Learn More</a>
+            </div>
+            <div class="flip-card-back bg-green-500 text-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-bold mb-4">Digital Presence</h3>
+              <p>Our digital presence services include:</p>
+              <ul class="list-disc pl-4">
+                <li>Web Design & Development</li>
+                <li>Search Engine Optimization (SEO)</li>
+                <li>Social Media Marketing</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-bold mb-4">IT Solutions</h3>
-          <p class="mb-4">Keep your business running smoothly with our comprehensive IT support and infrastructure solutions.</p>
-          <a href="#contact" class="text-blue-500 font-bold hover:underline">Learn More</a>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-bold mb-4">IT Solutions</h3>
+              <p class="mb-4">Keep your business running smoothly with our comprehensive IT support and infrastructure solutions.</p>
+              <a href="#contact" class="text-blue-500 font-bold hover:underline">Learn More</a>
+            </div>
+            <div class="flip-card-back bg-yellow-400 text-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-bold mb-4">IT Solutions</h3>
+              <p>Our IT solutions include:</p>
+              <ul class="list-disc pl-4">
+                <li>Managed IT Services</li>
+                <li>Cloud Solutions</li>
+                <li>Cybersecurity</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -82,7 +147,7 @@
   <footer class="bg-gray-800 text-white py-6">
     <div class="container mx-auto px-6 md:flex md:justify-between">
       <div class="mb-6 md:mb-0">
-        <a class="text-2xl font-bold" href="#">Urban Tech DC</a>
+        <a class="text-2xl font-bold" href="#">UrbanTechDC</a>
       </div>
       <div class="text-sm">
         <a class="hover:underline" href="mailto:info@urbantechdc.com">info@urbantechdc.com</a>
